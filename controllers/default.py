@@ -11,7 +11,13 @@
 
 @requires_login
 def index():
-    form=SQLFORM.smartgrid(db[request.args(0) or 'binding'])
+    form=SQLFORM.smartgrid(db[request.args(0) or 'binding'],
+        fields=[db.binding.chromosome, db.binding.start, db.binding.end, 
+                db.binding.gene_id, db.binding.cell_type,
+                db.binding.score, db.binding.method,
+                db.comment.user, db.comment.vote, 
+                db.comment.comment, db.comment.updated_on],
+        )
     return dict(form=form)
 
 
