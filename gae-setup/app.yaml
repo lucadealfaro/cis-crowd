@@ -41,7 +41,7 @@ skip_files: |
  (.*/RCS/.*)|
  (\..*)|
  (applications/(admin)/.*)|
- ((admin|crowdgrader)\.(w2p|tar))|
+ ((admin)\.(w2p|tar))|
  (applications/.*?/(cron|databases|errors|cache|sessions)/.*)|
  ((logs|scripts)/.*)|
  (anyserver\.py)|
